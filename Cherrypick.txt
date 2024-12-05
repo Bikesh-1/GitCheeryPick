@@ -1,0 +1,207 @@
+C:\Users\CSE-DEPT01>e:
+
+E:\>cd gitlab
+
+E:\gitlab>mkdir expriment8
+
+E:\gitlab>cd expriment8
+
+E:\gitlab\expriment8>notepad myfile8
+
+E:\gitlab\expriment8>git init
+Initialized empty Git repository in E:/gitlab/expriment8/.git/
+
+E:\gitlab\expriment8>git add myfile8.txt
+
+E:\gitlab\expriment8>git commit -m "line1 added in master"
+[master (root-commit) 1cc9a84] line1 added in master
+ 1 file changed, 1 insertion(+)
+ create mode 100644 myfile8.txt
+
+E:\gitlab\expriment8>git log
+commit 1cc9a8416bd201883699b1a3f08c1e32ff285e0e (HEAD -> master)
+Author: Bikesh Kumar <iambikeshkumar07@gmail.com>
+Date:   Thu Dec 5 09:22:34 2024 +0530
+
+    line1 added in master
+
+E:\gitlab\expriment8>myfile9.txt
+'myfile9.txt' is not recognized as an internal or external command,
+operable program or batch file.
+
+E:\gitlab\expriment8>git checkout -b fb1
+Switched to a new branch 'fb1'
+
+E:\gitlab\expriment8>myfile8.txt
+
+E:\gitlab\expriment8>git add myfile8.txt
+
+E:\gitlab\expriment8>git commit -m "line2 added in fb1"
+[fb1 6f426fe] line2 added in fb1
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+E:\gitlab\expriment8>myfile8.txt
+
+E:\gitlab\expriment8>git add myfile8.txt
+
+E:\gitlab\expriment8>git commit -m "line3 added in fb1"
+[fb1 43e4c03] line3 added in fb1
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+E:\gitlab\expriment8>myfile8.txt
+
+E:\gitlab\expriment8>git add myfile8.txt
+
+E:\gitlab\expriment8>git commit -m "line4 added in fb1"
+[fb1 df4f2a6] line4 added in fb1
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+E:\gitlab\expriment8>myfile8.txt
+
+E:\gitlab\expriment8>git add myfile8.txt
+
+E:\gitlab\expriment8>git commit -m "line5 added in fb1"
+[fb1 c1ebd88] line5 added in fb1
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+E:\gitlab\expriment8>myfile8.txt
+
+E:\gitlab\expriment8>git add myfile8.txt
+
+E:\gitlab\expriment8>git commit -m "line6 added in fb1"
+[fb1 20441e7] line6 added in fb1
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+E:\gitlab\expriment8>git log
+commit 20441e7fad9cbd20523ab374da289a12d8ac7218 (HEAD -> fb1)
+Author: Bikesh Kumar <iambikeshkumar07@gmail.com>
+Date:   Thu Dec 5 09:27:34 2024 +0530
+
+    line6 added in fb1
+
+commit c1ebd887e73057f60be2132c8ce7e90fdcb56afe
+Author: Bikesh Kumar <iambikeshkumar07@gmail.com>
+Date:   Thu Dec 5 09:27:00 2024 +0530
+
+    line5 added in fb1
+
+commit df4f2a66bfacd3233cac3684540077856cbe64b3
+Author: Bikesh Kumar <iambikeshkumar07@gmail.com>
+Date:   Thu Dec 5 09:26:16 2024 +0530
+
+    line4 added in fb1
+
+commit 43e4c03885d3916f15c701e62735cdef24ceb5ca
+Author: Bikesh Kumar <iambikeshkumar07@gmail.com>
+Date:   Thu Dec 5 09:25:32 2024 +0530
+
+    line3 added in fb1
+
+commit 6f426fe7ee9fb48ecedf96c53084d0df40570090
+Author: Bikesh Kumar <iambikeshkumar07@gmail.com>
+Date:   Thu Dec 5 09:24:46 2024 +0530
+
+    line2 added in fb1
+
+commit 1cc9a8416bd201883699b1a3f08c1e32ff285e0e (master)
+Author: Bikesh Kumar <iambikeshkumar07@gmail.com>
+Date:   Thu Dec 5 09:22:34 2024 +0530
+
+    line1 added in master
+
+E:\gitlab\expriment8>git checkout master
+Switched to branch 'master'
+
+E:\gitlab\expriment8>git checkout -b fb2
+Switched to a new branch 'fb2'
+
+E:\gitlab\expriment8>git cherry-pick 43e4c03885d3916f15c701e62735cdef24ceb5ca
+Auto-merging myfile8.txt
+CONFLICT (content): Merge conflict in myfile8.txt
+error: could not apply 43e4c03... line3 added in fb1
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+hint: Disable this message with "git config advice.mergeConflict false"
+
+E:\gitlab\expriment8>myfile8.txt
+
+E:\gitlab\expriment8>git add .
+
+E:\gitlab\expriment8>git cherry-pick --continue
+hint: Waiting for your editor to close the file... unix2dos: converting file E:/gitlab/expriment8/.git/COMMIT_EDITMSG to DOS format...
+dos2unix: converting file E:/gitlab/expriment8/.git/COMMIT_EDITMSG to Unix format...
+[fb2 14a6965] line3 added in fb1
+ Date: Thu Dec 5 09:25:32 2024 +0530
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+E:\gitlab\expriment8>myfile9.txt
+'myfile9.txt' is not recognized as an internal or external command,
+operable program or batch file.
+
+E:\gitlab\expriment8>myfile8.txt
+
+E:\gitlab\expriment8>git cherry-pick df4f2a66bfacd3233cac3684540077856cbe64b3 20441e7fad9cbd20523ab374da289a12d8ac7218
+Auto-merging myfile8.txt
+CONFLICT (content): Merge conflict in myfile8.txt
+error: could not apply df4f2a6... line4 added in fb1
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+hint: Disable this message with "git config advice.mergeConflict false"
+
+E:\gitlab\expriment8>myfile8.txt
+
+E:\gitlab\expriment8>git add .
+
+E:\gitlab\expriment8>git cherry-pick --continue
+hint: Waiting for your editor to close the file... unix2dos: converting file E:/gitlab/expriment8/.git/COMMIT_EDITMSG to DOS format...
+dos2unix: converting file E:/gitlab/expriment8/.git/COMMIT_EDITMSG to Unix format...
+[fb2 e985870] line4 added in fb1
+ Date: Thu Dec 5 09:26:16 2024 +0530
+ 1 file changed, 2 insertions(+)
+Auto-merging myfile8.txt
+CONFLICT (content): Merge conflict in myfile8.txt
+error: could not apply 20441e7... line6 added in fb1
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+hint: Disable this message with "git config advice.mergeConflict false"
+
+E:\gitlab\expriment8>myfile8.txt
+
+E:\gitlab\expriment8>git cherry-pick --continue
+U       myfile8.txt
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+E:\gitlab\expriment8>myfile8.txt
+
+E:\gitlab\expriment8>git cherry-pick --continue
+U       myfile8.txt
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+E:\gitlab\expriment8>git add .
+
+E:\gitlab\expriment8>git cherry-pick --continue
+hint: Waiting for your editor to close the file... unix2dos: converting file E:/gitlab/expriment8/.git/COMMIT_EDITMSG to DOS format...
+dos2unix: converting file E:/gitlab/expriment8/.git/COMMIT_EDITMSG to Unix format...
+[fb2 f91f2fe] line6 added in fb1
+ Date: Thu Dec 5 09:27:34 2024 +0530
+ 1 file changed, 3 insertions(+)
+
+E:\gitlab\expriment8>
